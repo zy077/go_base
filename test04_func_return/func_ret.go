@@ -25,6 +25,7 @@ func f03(a int, b int) (ret01 int, ret02 int) {  // 多个有名返回值
 	return ret01, ret02
 }
 
+
 func main(){
 	c := f01("tongtianzi", 20)
 	fmt.Println("c = ", c)
