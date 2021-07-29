@@ -20,9 +20,28 @@ func Add02(x int) func(int) int {
     }
 }
 
+// 装饰器和中间件指的就是函数作为参数进行传递的情况
+func wrapping(f func() string) {
+    fmt.Println("Before working...")
+    fmt.Println("Working: ", f())
+    fmt.Println("After working...")
+}
+
+func sayHello() string {
+    return "Hello !"
+}
+
+func sayByeBye() string {
+    return "Bye Bye ！"
+}
+
 func main()  {
     f := Add01()
     fmt.Println(f(20, 30))
     f02 := Add02(10)
     fmt.Println(f02(20))
+
+    // 装饰器和中间件
+    wrapping(sayHello)
+    wrapping(sayByeBye)
 }
