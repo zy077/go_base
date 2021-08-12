@@ -8,7 +8,7 @@ import (
 type AnimalIF interface {
 	// 接口就是抽象方法的集合
 	// 声明抽象方法
-	Sleep()
+	 Sleep()
 	GetColor() string
 	GetType() string
 }
